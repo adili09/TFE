@@ -1,0 +1,58 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  padding: 0;
+  font-family: sans-serif;
+}
+button {
+  cursor: pointer;
+  height:50px;
+  width: 50px;
+  
+}
+.rainbow-text {
+background: linear-gradient(to bottom right,blue, red, yellow, green);
+background-clip: text;
+-webkit-background-clip:text;
+-webkit-text-fill-color: transparent;
+animation: animate 1s linear infinite;
+
+}
+@keyframes animate{
+  0%{ 
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-sprite {
+    height: 250px;
+    width: 500px;
+    background:url(https://www.bennet.org/images/codepen/ryu-sprite-demo.png) no-repeat;
+     
+    animation: sprite 2s steps(46) infinite;
+  }
+
+  @keyframes sprite {
+
+ from { background-position: 0 0px; }
+  to { background-position: 0 -12282px;}
+}
